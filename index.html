@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>Weikfield offer</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-127329133-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <div class = "iosheader" id="iphoneHeader" style="display:none">
+        <a onclick="goToAppHome();"><span></span> Weikfield offer</a>
+    </div>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Offer on Weikfield</h1>
+            <p class="sub-heading">You are eligible for cashback on Weikfield products. Please enter the coupon code that you found inside the Weikfield packet.</p>
+            <p class="sub-heading" id="test"></p>
+        </div>
+        <div class="banner text-center">
+            <img src="images/banner.png">
+        </div>
+        <section>
+            <div class="form-field">
+                <input type="text" placeholder=" " id="couponCode" oninput="onInputText()" style="text-transform: uppercase"/>
+                <span class="label">Enter Coupon Code</span>
+                <div class="error" style="display: none;">Invalid coupon code </div>
+            </div>
+        </section>
+        <div class="button-container">
+            <button onclick="requestCouponValidation(document.getElementById('couponCode').value)" style="cursor:pointer;">Redeem Offer</button>
+            <div id="cover-spin"></div>
+            <!-- <button onclick="shareShowHide()">Redeem Offer</button> -->
+        </div>
+        <div id="accordion">
+            <div onclick="onScroll('click','APB_Wiekfield_Faq')">
+                <button class="collapsible mt-15">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                            <g fill="none" fill-rule="evenodd">
+                                <g>
+                                    <g transform="translate(-39 -794) translate(39 794)">
+                                        <circle cx="8.003" cy="8.72" r="7.253" stroke="#007AFF" stroke-width="1.5" />
+                                        <path fill="#007AFF" fill-rule="nonzero"
+                                            d="M7.484 10.636c.179 0 .334-.052.466-.156.132-.104.196-.245.192-.424l-.005-.362c-.004-.13.048-.263.156-.4.108-.135.243-.259.407-.37.164-.112.341-.245.533-.399.191-.154.369-.312.532-.474.164-.162.3-.365.41-.61.11-.246.165-.51.165-.792 0-.369-.066-.693-.198-.974-.132-.28-.315-.504-.547-.672-.232-.167-.495-.291-.79-.373-.293-.082-.614-.123-.964-.123-.591 0-1.156.076-1.695.229-.16.048-.28.126-.36.234-.08.108-.12.225-.12.351 0 .175.05.32.148.435.098.116.226.173.382.173.078 0 .273-.023.585-.07.313-.046.549-.07.709-.07.353 0 .642.076.867.227.225.15.337.402.337.755 0 .16-.034.315-.103.466-.069.15-.159.287-.27.41-.112.123-.235.244-.371.365s-.27.24-.402.36c-.132.119-.253.24-.365.362-.112.123-.2.259-.268.407-.067.15-.098.303-.095.463l.006.452c.007.186.075.33.204.43.128.1.28.15.454.15zm.011 2.298c.235 0 .428-.077.58-.232.153-.154.229-.34.229-.56 0-.223-.078-.41-.234-.558-.156-.149-.348-.223-.575-.223-.238 0-.431.077-.58.232-.148.154-.223.337-.223.549 0 .22.076.406.226.56.15.155.343.232.577.232z" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg> Frequently asked questions</span> <span class="view" id="vfq">View</span><span class="hide"
+                        id="hfq" style="display: none;">Hide</span></button>
+
+
+                <div class="content">
+                    <div>
+                        <ol>
+                            <li style="font-size: 14px;"> <strong>Q1: What happens if I have activated the offer and not
+                                    registered within the
+                                    time frame?</strong><br />
+                                A: Cashback will not be processed if you do not register within 10 days of coupon
+                                redemption.</li>
+                            <li style="font-size: 14px;"> <strong>Q2: Can I login from any mobile number in the app to
+                                    claim this
+                                    offer?</strong><br />
+                                A: You can login with any mobile number. The coupon can be redeemed once.</li>
+                            <li style="font-size: 14px;"> <strong>Q3: Can I redeem multiple coupons on the same mobile
+                                    number?</strong><br />
+                                A: Only one coupon will be redeemed for one mobile number and one cashback will be given
+                                to one mobile number.</li>
+                            <li style="font-size: 14px;"> <strong>Q4: My Coupon code is showing as not
+                                    valid?</strong><br />
+                                A: Please check the code again inside the pack and enter the correct code.</li>
+                            <li style="font-size: 14px;"> <strong>Q5: My coupon code is showing as already
+                                    redeemed?</strong><br />
+                                A: The code entered by you has been already consumed before and is not eligible for
+                                cashback. Please enter another code.</li>
+                            <li style="font-size: 14px;"> <strong>Q6: I have not received the cashback as per the
+                                    offer.</strong><br />
+                                A: If you are not registered with the Airtel Payment Bank, please register to get the
+                                cash back. Cashback will be given only if you register within 10 days of the coupon code
+                                redemption. You can click on the Banking tab of the Airtel Thanks App to check the
+                                status of the account. Cashback will be processed within 3 working days of coupon
+                                redemption and registration whichever is later.</li>
+                            <li style="font-size: 14px;"> <strong>Q7: Where can I see the cashback
+                                    amount?</strong><br />
+                                A: Amount once processed will be visible on the balance. Alternatively, you can check
+                                the transaction history to see the cashback received.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div onclick="onScroll('click','APB_Wiekfield_TnC')">
+                <button class="collapsible"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 16 16">
+                            <g fill="none" fill-rule="evenodd">
+                                <g>
+                                    <g transform="translate(-39 -834) translate(39 834)">
+                                        <circle cx="8" cy="8" r="7.25" stroke="#007AFF" stroke-width="1.5" />
+                                        <path fill="#007AFF" fill-rule="nonzero"
+                                            d="M7.855 4.684c.254 0 .46-.078.619-.234.158-.156.237-.36.237-.61 0-.252-.078-.455-.234-.609C8.32 3.077 8.115 3 7.86 3c-.257 0-.465.077-.624.231C7.08 3.385 7 3.588 7 3.84c0 .252.08.455.237.611.159.156.365.234.618.234zm0 7.316c.215 0 .392-.075.53-.225.14-.15.209-.359.209-.626v-4.39c0-.273-.07-.483-.208-.633-.139-.15-.316-.225-.53-.225-.215 0-.391.075-.528.225-.137.15-.205.36-.205.632v4.39c0 .272.068.482.205.63.137.148.313.222.527.222z" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg> Terms & Conditions</span><span class="view" id="vtc">View</span><span class="hide"
+                        id="htc" style="display: none;">Hide</span></button>
+                <div class="content">
+                    <ul>
+                        <li style="font-size: 14px;">1. Customer is eligible for only one cashback during the offer
+                            period.
+                        <li>
+                        <li style="font-size: 14px;">2. The customer can buy multiple products of Weikfield but will be
+                            given only one cashback
+                            for the coupon code entered on the app.
+                        <li>
+                        <li style="font-size: 14px;">3. Offer Period is from 15-Jan-2021 to 31-Aug-2021.
+                        <li>
+                        <li style="font-size: 14px;">4. The customer should key in the Coupon Code on the space provided
+                            in the Thanks App and
+                            proceed.
+                        <li>
+                        <li style="font-size: 14px;">5. Unregistered customers need to register within 10 days of coupon
+                            code validation for
+                            receiving the amount.
+                        <li>
+                        <li style="font-size: 14px;">6. Cashback will be credited within 3 working days.
+                        <li>
+                        <li style="font-size: 14px;">7. One code cannot be used to avail the offer multiple times.
+                        <li>
+                        <li style="font-size: 14px;">8. Status of coupon code will be shown in the app.
+                        <li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<div class="overlay" id="overlay" onclick=""></div>
+<div class="bottom-up" id="bottomUp">
+    <div class="share-wrapper">
+        <h1>You have not created your wallet yet</h1>
+        <p>To avail this offer you need to create Airtel Payments Bank Wallet</p>
+        <div class="button-container" id="register">
+            <button onclick="onClickButton('register')" style="cursor:pointer;">Register Now</button>
+        </div>
+        <div class="button-container" id="moreoffers">
+            <button onclick="onClickButton('moreoffers')" style="cursor:pointer;">More Offers</button>
+        </div>
+        <div class="button-container" id="errorfetch" style="display:none">
+            <button onclick="onClickButton('errorfetch')" style="cursor:pointer;">Try Again</button>
+        </div>
+    </div>
+</div>
+<script src="js/jsencrypt.min.js"></script>
+<script src="js/crypto-js.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/encryption/encryption.js"></script>
+<script src="js/wiekfieldoffer.js"></script>
+
+
+<script>
+    var toogleViewFQ = true;
+    var toogleViewTC = true;
+
+    window.onload = () => { customerAppInIt(); }
+
+    function onInputText() {
+        document.getElementsByClassName("error")[0].style.display = "none";
+    }
+
+    function onScroll(eventType, eventId) {
+        if (eventId == "APB_Wiekfield_TnC") {
+            if (toogleViewTC) {
+                toogleViewTC = false;
+                document.getElementById("htc").style.display = "";
+                document.getElementById("vtc").style.display = "none";
+            } else {
+                toogleViewTC = true;
+                document.getElementById("htc").style.display = "none";
+                document.getElementById("vtc").style.display = "";
+            }
+        } else if (eventId == "APB_Wiekfield_Faq") {
+            if (toogleViewFQ) {
+                toogleViewFQ = false;
+                document.getElementById("hfq").style.display = "";
+                document.getElementById("vfq").style.display = "none";
+            } else {
+                toogleViewFQ = true;
+                document.getElementById("hfq").style.display = "none";
+                document.getElementById("vfq").style.display = "";
+            }
+        }
+       // window.scrollTo(0,document.querySelector(".collapsible").scrollHeight);
+        //console.log(document.body.scrollHeight);
+        setTimeout(function () { window.scrollTo(0, document.body.scrollHeight+30); }, 300);
+       // console.log(document.body.scrollHeight);
+        trackEvent(eventType, eventId);
+    }
+
+    function onClickButton(classId) {
+        var userAgent = navigator.userAgent,
+            isAndroid = /(android)/i.test(userAgent),
+            isIOS = /(iPhone|iPod|iPad)/i.test(userAgent),
+            appVersionCondition = '';
+        shareShowHide();
+        if (classId == "errorfetch") {
+            trackEvent("click", "APB_Wiekfield_TryAgainClicked");
+        } else if (classId == "moreoffers") {
+            trackEvent("click", "APB_Wiekfield_MoreOffersClicked");
+            if (isIOS) {
+               // window.location.href = "myairtel://apbOffers"
+                window['webkit'].messageHandlers.launchBrowser.postMessage("myairtel://apbOffers");
+            } else if (isAndroid) {
+                window.location.href = "myairtel://bank_offers"
+            }
+        } else if (classId == "register") {
+            trackEvent("click", "APB_Wiekfield_CreateAccountClicked");
+            if (isIOS) {
+                //window.location.href = "myairtel://payment_bank"
+                window['webkit'].messageHandlers.launchBrowser.postMessage("myairtel://payment_bank");
+            } else if (isAndroid) {
+                window.location.href = "myairtel://home?p=AirtelBankHomeFragment"
+            }
+        }
+    }
+
+    async function requestCouponValidation(couponcode) {
+        $('#cover-spin').show(0);
+        trackEvent("clickButton", "APB_Wiekfield_RedeemOfferClicked");
+       // || couponcode.length === 0 || !couponcode.trim()
+        var letterNumber = /^[0-9a-zA-Z]+$/;
+        if (!couponcode.match(letterNumber) || couponcode.length <10 ) {
+            document.getElementsByClassName("error")[0].style.display = "";
+            document.getElementsByClassName("error")[0].innerHTML = "Enter a valid coupon code!";
+            $('#cover-spin').hide(0);
+            return;
+        }
+        document.getElementsByClassName("error")[0].style.display = "none";
+        var deviceId = localStorage.getItem('deviceId');
+        //document.getElementById("test").innerHTML = "Device ID: "+deviceId;
+        await redeemCoupon(deviceId, couponcode).then((couponResponse) => {
+            console.log(couponResponse);
+            $('#cover-spin').hide(0);
+            trackEvent(couponResponse, "APB_Wiekfield_ValidateAPIsuccess");
+            if (couponResponse.data) {
+                if (couponResponse.data.successCode == 12) {
+                    //register user cashback provided
+                    shareShowHide();
+                    $(".share-wrapper h1").html("Coupon Redeemed");
+                    $(".share-wrapper p").html(couponResponse.data.message);
+                    //document.getElementsByClassName("share-wrapper").innerHTML = "<h1>Succesfull</h1><p>'couponResponse.data.message'</p1>";
+                    document.getElementById("register").style.visibility = "hidden";
+                    document.getElementById("register").style.display = "none";
+                    document.getElementById("moreoffers").style.display = "";
+                    document.getElementById("moreoffers").style.visibility = "visible";
+                } else if (couponResponse.data.successCode == 13 || couponResponse.data.successCode == 14) {
+                    //unregister user cashback provided
+                    trackEvent(couponResponse.data.message, "APB_Wiekfield_CreateAccountdisplayed");
+                    shareShowHide();
+                    document.getElementById('overlay').style.display = 'block';
+                    if(couponResponse.data.successCode == 14){
+                        $(".share-wrapper h1").html("Previous coupon redeemption in progress");
+                    }else{
+                        $(".share-wrapper h1").html("Coupon Redeemed");
+                    }
+                    $(".share-wrapper p").html(couponResponse.data.message);
+                    //document.getElementsByClassName("share-wrapper").innerHTML = "<h1>Succesfull</h1><p>'couponResponse.data.message'</p1>";
+                    document.getElementById("register").style.display = "";
+                    document.getElementById("register").style.visibility = "visible";
+                    document.getElementById("moreoffers").style.visibility = "hidden";
+                    document.getElementById("moreoffers").style.display = "none";
+                } else if (couponResponse.data.successCode == 0 || couponResponse.data.successCode == 1 || couponResponse.data.successCode == 21 || couponResponse.data.successCode == 410 ) {
+                    document.getElementsByClassName("error")[0].style.display = "";
+                    document.getElementsByClassName("error")[0].innerHTML = couponResponse.data.message;
+                }
+            }
+        }, (error) => {
+            $('#cover-spin').hide(0);
+            document.getElementsByClassName("error")[0].style.display = "";
+            document.getElementsByClassName("error")[0].innerHTML = error;
+            trackEvent(error, "APB_Wiekfield_ValidateAPIFail");
+        });
+    }
+
+    function openLink(offerType, iOSUrl, androidUrl) {
+        const userAgent = navigator.userAgent || navigator.vendor || window['opera'];
+        // iOS detection
+        const url = /iPad|iPhone|iPod/.test(userAgent) && !window['MSStream'] ? iOSUrl : androidUrl;
+        if (url) {
+            trackEvent(offerType, "APB_Wiekfield_Landing");
+            window.location.href = url;
+        }
+    }
+
+    //Google Analytics
+    function trackEvent(offerLabel, eventaction) {
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'APB_Weikfeild_offer',
+            eventAction: eventaction,
+            eventLabel: offerLabel
+        });
+    }
+
+    function customerAppInIt() {
+        this.androidInit();
+        this.iosInit();
+        // development
+       // this.development();
+    }
+
+    function development() {
+        if (!window['MyAirtelAppReact'] && !window['webkit']) {
+            localStorage.setItem('deviceId', 'b90321ff-18eb-4f11-8d44-2989e1f496e3');
+        }
+    }
+
+    function androidInit() {
+        const custAppObject = window['MyAirtelAppReact'];
+        if (custAppObject) {
+            document.getElementById("iphoneHeader").style.display="none";
+            localStorage.setItem('deviceId', custAppObject.getWalletDeviceId());
+        }
+    }
+
+    function iosInit() {
+        const custAppObject = window['MyAirtelAppReact'];
+        if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+            document.getElementById("iphoneHeader").style.display="";
+           // document.getElementsByClassName("wrapper")[0].style.marginTop="34px";
+           window['iosParameters'] = handleIOSCallback;
+           window['webkit'].messageHandlers.getParameters.postMessage('');
+        }
+    }
+
+  const handleIOSCallback= function (e) {
+        const deviceInfo = JSON.parse(e);
+        window.getParameters = deviceInfo;
+        if (deviceInfo.deviceId) {
+            localStorage.setItem('deviceId', deviceInfo.deviceId);
+        } else {
+            goToAppHome();
+            // Session expire
+        }
+    }
+</script>
+
+</html>
